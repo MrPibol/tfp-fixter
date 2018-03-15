@@ -1,0 +1,33 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#flex-content-container {
+  flex: 1;
+}
+
+#footer {
+//   Now I want to make sure the footer moves dynamically, relative to where it is in our code 
+//   and keeps max width with our browser. I also want the footer to be black and semi-transparent
+//   Push the footer down a bit to make sure it doesn't overlap any of our content ever --> Maring-top
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgba(36, 32, 33, 0.9);
+  color: white;
+  font-family: "Helvetica Neue", Helvetica;
+  padding: 10px 0px;
+  margin-top: 30px;
+}
+
+#footer a {
+  color: white;
+  font-weight: 100;  
+}
+
