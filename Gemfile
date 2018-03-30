@@ -62,3 +62,6 @@ end
 
 #Simple Form
 gem 'simple_form'
+
+#Devise
+gem 'devise'
