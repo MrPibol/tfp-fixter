@@ -1,0 +1,12 @@
+<br />
+<div class="booyah-boy col-10 offset-1">
+    <h1>Add a New Lesson</h1>
+    <br />
+    <%= simple_form_for @lesson, url:instructor_section_lessons_path(@section.id) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :subtitle %>
+        <br />
+        <%= f.submit 'New Lesson' , class:'btn btn-primary' %>
+    <% end %>
+</div>
+
