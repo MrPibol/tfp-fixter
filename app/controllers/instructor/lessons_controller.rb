@@ -1,7 +1,6 @@
 class Instructor::LessonsController < ApplicationController
     before_action :authenticate_user!
     def new
-
         if current_section.course.user != current_user
             return render plain: "Unauthorized", status: :unauthorized
         end
