@@ -68,3 +68,9 @@ gem 'devise'
 
 #CarriwerWave
 gem 'carrierwave', '~> 1.0'
+
+#figaro
+gem "figaro"
+
+#fog AWS Install fog gem so carrierwave would communicate with Amazon S3.
+gem "fog-aws"
