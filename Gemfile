@@ -74,3 +74,6 @@ gem "figaro"
 
 #fog AWS Install fog gem so carrierwave would communicate with Amazon S3.
 gem "fog-aws"
+
+#Simplifies manipulation of images by providing helper methods
+gem "mini_magick"
