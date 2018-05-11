@@ -77,3 +77,6 @@ gem "fog-aws"
 
 #Simplifies manipulation of images by providing helper methods
 gem "mini_magick"
+
+#Carrierwave-aws
+gem 'carrierwave-aws'
