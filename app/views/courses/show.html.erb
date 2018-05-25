@@ -8,15 +8,15 @@
                 <%= number_to_currency(@course.cost) %>
             </span>
             
-            <% if current_user %>
-                <% if current_user == @course.user %>
+            <% if current_user && current_user == @course.user %>
                     <br />
                     <br />
                     <%= link_to 'Administer', instructor_course_path(@course.id), class:'btn btn-primary'%>
-                <% end %>
+            <% end %>
                     <br />
                     <br />
-                <% if current_user && current_user.enrolled_in?(@course) %>
+            <% if current_user %>
+                <% if current_user.enrolled_in?(@course) %>
                     <h3 class="badge badge-info">You Are Enrolled!</h3>
                 <%else%>
                     <% if @course.free? %>
@@ -33,10 +33,10 @@
                                   data-locale="auto"></script>
                        <% end %>
                        <!--Stripe code-->
-                    <% end %> 
-                <% else %>
-                    <h3 class="badge badge-info">Sign In to Enroll!</h3>
+                    <% end %>
                 <% end %>
+            <% else %>
+                    <h3 class="badge badge-info">Sign In to Enroll!</h3>
             <% end %>
         </div>
         <br class="clr" />
