@@ -1,11 +1,28 @@
 class EnrollmentsController < ApplicationController
     def create
-        @enrollment = current_user.enrollments.create(course: current_course)
-       if @enrollment.valid?
-           redirect_to course_path(current_course)
-       else
-            render :new, status: :unprocessable_entity
-       end
+      @enrollment = current_user.enrollments.create(course: current_course)
+       
+       # Amount in cents
+       @amount = (current_course.cost*100).to_i
+    
+        customer = Stripe::Customer.create(
+          email: params[:stripeEmail],
+          source: params[:stripeToken]
+        )
+    
+        charge = Stripe::Charge.create(
+          customer: customer.id,
+          amount: @amount,
+          description: 'Fixter Premium Content',
+          currency: 'usd'
+        )
+
+
+        redirect_to course_path(current_course)
+    
+        rescue Stripe::CardError => e
+          flash[:error] = e.message
+          redirect_to root_path
     end
     
   private
