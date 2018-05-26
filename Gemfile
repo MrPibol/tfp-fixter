@@ -83,3 +83,5 @@ gem 'carrierwave-aws'
 
 #Strip payment platform
 gem 'stripe'
+
+gem 'ranked-model', :git => 'git@github.com:mixonic/ranked-model.git'

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test plugin</title>
+  <%= stylesheet_link_tag    "test_plugin/application", media: "all" %>
+  <%= javascript_include_tag "test_plugin/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

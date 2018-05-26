@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:mixonic/ranked-model.git
+  revision: 5fd725bb07a331e0fb10ba3f1b0bee15dad8a47f
+  specs:
+    ranked-model (0.4.0)
+      activerecord (>= 3.1.12)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -250,6 +257,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.6)
   rails-assets-tether (>= 1.3.3)!
+  ranked-model!
   sass-rails (~> 5.0)
   simple_form
   spring
