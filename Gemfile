@@ -84,4 +84,8 @@ gem 'carrierwave-aws'
 #Strip payment platform
 gem 'stripe'
 
-gem 'ranked-model', :git => 'git@github.com:mixonic/ranked-model.git'
+# gem 'ranked-model', :git => 'git@github.com:mixonic/ranked-model.git'  This work well in dev env, but I got a fatal error while pushing to Heroku
+# remote:        Fetching git@github.com:mixonic/ranked-model.git
+# remote:        Host key verification failed.
+# remote:        fatal: Could not read from remote repository.
+gem 'ranked-model'
