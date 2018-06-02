@@ -89,3 +89,4 @@ gem 'stripe'
 # remote:        Host key verification failed.
 # remote:        fatal: Could not read from remote repository.
 gem 'ranked-model'
+gem 'jquery-ui-rails'
