@@ -49,7 +49,7 @@
     <br />
     <div class="col-12">
         <!--<div class="booyah-box col-8 offset-1">-->
-            <% @course.sections.each do |section| %>
+            <% @course.sections.rank(:row_order).each do |section| %>
                 <div class="section">
                     <br />
                     <h3>
@@ -63,7 +63,7 @@
                                 <div class="lesson text-center">
                                     <%= link_to lesson_path(lesson) do %>
                                         <b><%= lesson.title %></b>
-                                        <br/>
+                                        -
                                         <%= lesson.subtitle %>
                                     <%end%>
                                 </div>
