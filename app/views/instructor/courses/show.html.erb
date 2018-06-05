@@ -49,15 +49,29 @@
     <!--<div class="row"> this just puts the content below to the left-->
             <ul class="sections">
                 <% current_course.sections.rank(:row_order).each do |section| %>
-                        <li data-update-url=<%= instructor_section_path(section)%>>
+                        <li data-update-url=<%= instructor_section_path(section)%> class="section-li">
+                            <div class="header">
+                                <span class="fa fa-ellipsis-v left"></span>
                                 <%= section.title %>
+                            </div>
                                 <%= link_to 'New Lessons', new_instructor_section_lesson_path(section.id), class:'btn btn-primary btn-lg float-right' %>
+                                <br class="clr">
+                                <br class="clr">
                             <ul class="lessons">
                                 <% section.lessons.rank(:row_order).each do |lesson| %>
-                                    <li data-update-url=<%= instructor_lesson_path(lesson) %>>
-                                        <%= lesson.title %>
-                                        -
-                                        <%= lesson.subtitle %>
+                                    <li data-update-url=<%= instructor_lesson_path(lesson) %> class="lesson-li">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <br />
+                                            <span  class="fa fa-ellipsis-v left"></span p>
+                                        </div>
+                                        
+                                        <div class="col-11">
+                                            <p class="lesson-title"><%= lesson.title %></p>
+                                            <p class="lesson-subtitle"><%= lesson.subtitle %></p>
+                                        </div>
+                                    </div>
+                                    <br class="clr" />
                                     </li>
                                 <% end %>
                             </ul>
