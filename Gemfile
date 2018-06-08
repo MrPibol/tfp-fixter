@@ -90,3 +90,4 @@ gem 'stripe'
 # remote:        fatal: Could not read from remote repository.
 gem 'ranked-model'
 gem 'jquery-ui-rails'
+gem 'font-awesome-rails'
