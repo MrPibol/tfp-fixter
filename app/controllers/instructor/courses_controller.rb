@@ -8,6 +8,7 @@ class Instructor::CoursesController < ApplicationController
 
     def show
         # @course = Course.find(params[:id]) It's no longer needed because we have the helper_method :current_course
+        @section = Section.new
     end
     
     def create
