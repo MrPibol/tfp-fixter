@@ -71,9 +71,13 @@ h1, h2, h3, h4, h5, h6, .navbar {
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 10px;
 }
-.booyah-box h2, .booyah-box h1 {
+.booyah-box h2, .booyah-box h1, p {
   margin: 10px;
 }
+.index-box, .video-box{
+  padding: 30px;
+}
+
 .help-block {
   color: #ff3333;
   background-color: #FFEEEE;
@@ -141,4 +145,10 @@ ul .header .fa{
     float: left;
     padding-left: 5px;
     padding-right: 5px;
+}
+.next-lesson{
+  padding-left: 10px;
+}
+.mr-auto{
+  padding-left: 15px;
 }
