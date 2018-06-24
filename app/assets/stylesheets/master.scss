@@ -5,6 +5,7 @@
   font-weight: 200;
   box-shadow: 0px 1px 3px #2a2a2a;  //little box shadow
   background: image_url('footer_lodyas.png'); //add some small design detail of adding a simple 
+  height: auto;
   //a pattern as the background, app/assets/images (png format) source:subtlepatterns.com
 }
 .navbar-inverse a.navbar-brand {
@@ -12,9 +13,13 @@
   font-weight: 100; 
   color: white;  //Next change I want to do is make the brand be white instead of grey.
 }
-.navbar-right {
-  position: absolute;
-  right: 1rem;
+// .navbar-right {
+//   position: absolute;
+//   right: 1rem;
+// }
+.navbar-inverse a.navbar-brand:hover,
+.navbar-nav a:hover {
+  text-shadow: 2px 2px 2px #555;
 }
 .hero {
     background: image_url('hero.jpg') no-repeat center center fixed;
